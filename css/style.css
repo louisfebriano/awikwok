@@ -8,8 +8,15 @@
 }
 
 .navbar {
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-bottom: 1px black; 
     font-weight: 500;
     background-color: var(--background-color);
+}
+
+.navbar-nav li,a{              
+    margin-left: 10px;
 }
 
 .navbar-brand img {
@@ -38,6 +45,7 @@
     background-color: var(--accent-color);
     color: var(--contrast-color);
 }
+
 
 .hero {
     width: 100%;
