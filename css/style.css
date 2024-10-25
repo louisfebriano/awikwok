@@ -1,0 +1,33 @@
+/* Navbar padding adjustment */
+.header-padding {
+}
+
+/* "Get an Estimate" button styling */
+.btn-green {
+    background-color: transparent;
+    color: #0a944f; /* Green color for text */
+    border: 2px solid #0a944f; /* Green outline */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-green:hover {
+    background-color: #0a944f; /* Darker orange on hover */
+    color: #fff;
+}
+
+.navbar-brand img {
+    width: 3.5rem;
+    height: 3.5rem; 
+    border-radius: 50%; 
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease; /* Menambahkan transisi untuk efek hover */
+}
+
+.navbar-nav .nav-link:hover {
+    transition: color 0.3s ease;
+    color: #0a944f; /* Mengubah warna teks saat hover */
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
