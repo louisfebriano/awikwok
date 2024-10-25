@@ -1,33 +1,250 @@
 
-/* "Get an Estimate" button styling */
-.btn-green {
-    background-color: transparent;
-    color: #0a944f; /* Green color for text */
-    border: 2px solid #0a944f; /* Green outline */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-.btn-green:hover {
-    background-color: #0a944f; /* Darker orange on hover */
-    color: #fff;
-}
-
-.navbar-brand img {
+:root {
+    --background-color: #ffffff;
+    --default-color: #3d4348;
+    --heading-color: #3e5055;
+    --accent-color: #0a944f;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+  }
+  
+  .navbar {
+    font-weight: 500;
+    background-color: var(--background-color);
+  }
+  
+  .navbar-brand img {
     width: 3.5rem;
-    height: 3.5rem; 
-    border-radius: 50%; 
-}
-
-
-
-
-/* Navbar link hover effect */
-.navbar-nav .nav-link {
-    transition: color 0.3s ease; /* Menambahkan transisi untuk efek hover */
-}
-
-.navbar-nav .nav-link:hover {
+    height: 3.5rem;
+    border-radius: 50%;
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--default-color);
     transition: color 0.3s ease;
-    color: #0a944f; /* Mengubah warna teks saat hover */
-    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .btn-green {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-green:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+    position: relative;
+    padding: 180px 0 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .hero .hero-bg img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero .hero-bg::before {
+    content: "";
+    background: color-mix(in srgb, var(--background-color), transparent 30%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--heading-color);
+  }
+  
+  .hero h1 span {
+    color: var(--accent-color);
+  }
+  
+  .hero p {
+    color: var(--default-color);
+    margin: 5px 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .hero .btn-1,
+  .hero  {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+
+.btn-2:hover{
+    color: var(--accent-color);
+    transition: 0.5s;
+    text-decoration: none;
 }
+  
+  .hero .btn-1:hover,
+  .hero  {
+    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  }
+  
+  .hero .btn-2 {
+    font-size: 16px;
+    margin-left: 25px;
+    color: var(--default-color);
+    font-weight: 600;
+  }
+  
+  .hero .btn-2 i {
+    color: var(--accent-color);
+    font-size: 32px;
+    margin-right: 8px;
+    line-height: 0;
+  }
+  
+  @media (max-width: 640px) {
+    .hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    .hero p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .hero .btn-1,
+    .hero .btn-2 {
+      font-size: 13px;
+    }
+  }
+
+
+  .culture-category .post-entry {
+    margin-bottom: 30px;
+  }
+  
+  .culture-category .post-entry h3 a {
+    color: var(--heading-color);
+    font-weight: 600;
+  }
+  
+  .culture-category .post-entry h3 a:hover {
+    text-decoration: underline;
+  }
+  
+  .culture-category .post-entry .thumbnail {
+    flex: 0 0 65%;
+  }
+  
+  @media (max-width: 960px) {
+    .culture-category .post-entry .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .culture-category .post-entry.half .thumbnail {
+    flex: 0 0 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .culture-category .post-entry.half .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .culture-category .post-entry.small-img .thumbnail {
+    flex: 0 0 30%;
+  }
+  
+  @media (max-width: 768px) {
+    .culture-category .post-entry.small-img .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .culture-category .post-meta {
+    font-size: 11px;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    margin-bottom: 10px;
+  }
+  
+  .culture-category .author .photo {
+    margin-right: 10px;
+  }
+  
+  .culture-category .author .photo img {
+    width: 40px;
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+  
+  .culture-category .author .name h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: var(--default-font);
+  }
+  
+  .culture-category .post-list {
+    margin-bottom: 30px;
+  }
+  
+  .culture-category .post-list img {
+    margin-bottom: 30px;
+  }
+  
+  .culture-category .post-list h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .culture-category .post-list h2 a {
+    color: var(--heading-color);
+  }
+  
+  .culture-category .post-list h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  .culture-category .post-list.lg h2 {
+    font-size: 40px;
+    line-height: 1;
+  }
+ 
