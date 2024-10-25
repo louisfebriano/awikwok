@@ -1,6 +1,3 @@
-/* Navbar padding adjustment */
-.header-padding {
-}
 
 /* "Get an Estimate" button styling */
 .btn-green {
@@ -20,6 +17,9 @@
     height: 3.5rem; 
     border-radius: 50%; 
 }
+
+
+
 
 /* Navbar link hover effect */
 .navbar-nav .nav-link {
